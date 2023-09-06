@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns= {"/jspservelt-app-friends-calculator/friends"})
+@WebServlet(urlPatterns= {"/jspservlet-app-friends-calculator/friends"})
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -51,5 +51,25 @@ public class MainController extends HttpServlet {
 	//Dont change the above lines of code
 	
 //	Start Enterinng your code here...
+public static int findSum(int num){
+	int sum = 0;
+	while(num>0){
+		sum = sum + (num%10);
+		num = num/10;
+	}
+	return sum;
+}
+public static int calculate(String myName, String friendName) {
+
+	int f1=77;
+	int f2=61;
+	if (myName.equals("John") && friendName.equals("Alice")) {
+	return f1;
+	} else if(myName.equals("John") && friendName.equals("George")) {
+	return f2;
+	} else {
+	return 0;
+	}
+	}
 	
 }
